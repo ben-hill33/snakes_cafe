@@ -1,46 +1,39 @@
-orders = {
+import menu
+
+
+appetizers = {
     'wings': 0,
+    # 'onion_rings': 0,
+    # 'spring_rolls': 0,
 }
 
-print(orders)
+entrees = {
+    'wings': 0,
+    # 'onion_rings': 0,
+    # 'spring_rolls': 0,
+}
 
-menu = """
-**************************************
-**   Welcome to the Snakes Cafe!    **
-**   Please see our menu below.     **
-**                                  ** 
-** To quit at any time, type "quit" **
-**************************************
+desserts = {
+    'wings': 0,
+    # 'onion_rings': 0,
+    # 'spring_rolls': 0,
+}
 
-Appetizers
-----------
-Wings
-Cookies
-Spring Rolls
 
-Entrees
--------
-Salmon
-Steak
-Meat Tornado
-A Literal Garden
+def main():
+    print(menu.menu)
 
-Desserts
---------
-Ice Cream
-Cake
-Pie
+    # print(menu)
+    appetizer_order = appetizers['wings']
 
-Drinks
-------
-Coffee
-Tea
-Unicorn Tears
+    user_input = input('> ')
 
-**************************************
-**   What would you like to order?  **
-**************************************
+    print(user_input)
+    print(appetizer_order)
 
-"""
+    appetizers['wings'] += 1
+    print(appetizers)
 
-print(menu)
+
+if __name__ == "__main__":
+    main()
