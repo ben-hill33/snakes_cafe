@@ -3,7 +3,7 @@ import menu
 
 def main():
     print(menu.menu)
-    choice = {
+    appetizers = {
         'wings': 0,
         'onion_rings': 0,
         'spring_rolls': 0,
@@ -22,18 +22,19 @@ def main():
         'unicorn_tears': 0,
         'quit': 'quit',
     }
-
-    while choice != 'quit':
-        choice = input('> ')
-        if choice == 'wings':
-            # print()
-            # choice['wings'] += 1
-            return (str(choice['wings']) +
-                    '** order of Wings have been added to your meal **')
-        elif choice == 'quit':
+    user_input = ''
+    while user_input != 'quit':
+        user_input = input('> ')
+        if user_input == 'wings':
+            appetizers['wings'] += 1
+            print('** ' + str(appetizers['wings']) +
+                  ' order of Wings have been added to your meal **')
+        elif user_input == 'quit':
             print('Thank you for your order!')
         else:
             print('Try again')
+        continue
+    # print(choice)
 
     # print(user_input)
 
