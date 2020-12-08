@@ -3,35 +3,24 @@ import menu
 
 def main():
     print(menu.menu)
-
-    appetizers = {
+    
+    order = {
         'wings': 0,
-        'onion_rings': 0,
-        'spring_rolls': 0,
-        'quit': 'quit',
-    }
-
-    entrees = {
+        'onion rings': 0,
+        'spring rolls': 0,
         'salmon': 0,
         'steak': 0,
-        'meat_tornado': 0,
-        'a_literal_garden': 0,
-        'quit': 'quit',
-    }
-    desserts = {
-        'ice_cream': 0,
+        'meat tornado': 0,
+        'a literal garden': 0,
+        'ice cream': 0,
         'cake': 0,
         'pie': 0,
         'cookies': 0,
-        'quit': 'quit',
-    }
-
-    drinks = {
         'beer': 0,
         'soda': 0,
         'coffee': 0,
         'tea': 0,
-        'unicorn_tears': 0,
+        'unicorn tears': 0,
         'quit': 'quit',
     }
 
@@ -39,21 +28,15 @@ def main():
 
     while user_input != 'quit':
         user_input = input('> ')
-        if user_input == 'wings':
-            # wing_order = appetizers['wings']
-            # onion_order = appetizers['onion_rings']
-            # spring_order = appetizers['spring_rolls']
-            appetizers['wings'] += 1
-            print('** ' + str(appetizers['wings']) + ' order of wings have been added to your meal **')
-        elif user_input == 'quit':
+        input_lower = user_input.lower()
+        if user_input == user_input:
+            order[input_lower] += 1
+            print('** ' + str(order[input_lower]) + ' order of ' + input_lower + ' have been added to your meal **')
+        elif input_lower == 'quit':
             print('Thank you for your order!')
         else:
             print('Try again')
-        continue
-    # print(choice)
-
-    # print(user_input)
-
+        
 
 if __name__ == "__main__":
     main()
