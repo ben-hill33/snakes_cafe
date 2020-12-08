@@ -40,9 +40,11 @@ def main():
     while user_input != 'quit':
         user_input = input('> ')
         if user_input == 'wings':
+            # wing_order = appetizers['wings']
+            # onion_order = appetizers['onion_rings']
+            # spring_order = appetizers['spring_rolls']
             appetizers['wings'] += 1
-            print('** ' + str(appetizers['wings']) +
-                  ' order of Wings have been added to your meal **')
+            print('** ' + str(appetizers['wings']) + ' order of wings have been added to your meal **')
         elif user_input == 'quit':
             print('Thank you for your order!')
         else:
@@ -55,32 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# appetizers = {
-#     'wings': 0,
-#     'onion_rings': 0,
-#     'spring_rolls': 0,
-# }
-
-# entrees = {
-#     'salmon': 0,
-#     'steak': 0,
-#     'meat_tornado': 0,
-#     'a_literal_garden': 0,
-# }
-
-# desserts = {
-#     'ice_cream': 0,
-#     'cake': 0,
-#     'pie': 0,
-#     'cookies': 0,
-# }
-
-# beverages = {
-#     'beer': 0,
-#     'soda': 0,
-#     'coffee': 0,
-#     'tea': 0,
-#     'unicorn_tears': 0,
-# }
