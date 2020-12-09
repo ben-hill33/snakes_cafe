@@ -1,6 +1,5 @@
 import menu
 
-
 def main():
     print(menu.menu)
     
@@ -28,14 +27,17 @@ def main():
 
     while user_input != 'quit':
         user_input = input('> ')
-        input_lower = user_input.lower()
-        if user_input == user_input:
-            order[input_lower] += 1
-            print('** ' + str(order[input_lower]) + ' order of ' + input_lower + ' have been added to your meal **')
-        elif input_lower == 'quit':
+        input_to_lower = user_input.lower()
+        if input_to_lower == 'quit':
             print('Thank you for your order!')
+            continue
+        elif input_to_lower in order:
+            order[input_to_lower] += 1
+            print(f'** {order[input_to_lower]} order of {input_to_lower} have been added to your meal **')
+            continue
         else:
-            print('Try again')
+            print('Sorry, we don\'t serve that here')
+            
         
 
 if __name__ == "__main__":
